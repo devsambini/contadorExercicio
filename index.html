@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador Exercicio Crescimento</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 150px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+    h2, button {
+      margin-top: 20px;
+    }
+    button {
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      background-color: #0f0;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Quantas vezes fiz hoje?</h1>
+    <h2>0</h2>
+    <button>Adicionar</button>
+  </div>
+  <script>
+
+    const btn = document.querySelector('button')
+    const conteudo = document.querySelector('h2')
+    let vezes = 0
+    btn.addEventListener('click', () => {
+      conteudo.innerHTML = vezes++  
+    })
+
+  </script>
+</body>
+</html>
