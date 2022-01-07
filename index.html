@@ -25,11 +25,23 @@
     h2, button {
       margin-top: 20px;
     }
-    button {
+    .adicionar {
       padding: 20px;
+      width: 135px;
       font-size: 20px;
       border: none;
       background-color: #0f0;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .zerar {
+      padding: 20px;
+      width: 135px;
+      font-size: 20px;
+      border: none;
+      background-color: #f00;
       color: #fff;
       font-weight: bold;
       border-radius: 5px;
@@ -41,17 +53,22 @@
   <div class="container">
     <h1 class="title">Quantas vezes fiz hoje?</h1>
     <h2>0</h2>
-    <button>Adicionar</button>
+    <button class="adicionar">Adicionar</button>
+    <button class="zerar">Zerar</button>
   </div>
   <script>
 
     const btn = document.querySelector('button')
     const conteudo = document.querySelector('h2')
+    const btnZerar = document.querySelector('.zerar')
     let vezes = 0
     btn.addEventListener('click', () => {
       conteudo.innerHTML = vezes++  
     })
-
+    btnZerar.addEventListener('click', () => {
+      vezes = 0
+      conteudo.innerHTML = vezes 
+    })
   </script>
 </body>
 </html>
